@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saif-Developer portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color: rgb(159, 159, 234);
+            font-size: 1.04rem;
+        }
+        main hr{
+            border: 0;
+            background: rgb(186, 139, 233);
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left{
+            font-size: 1.5rem;
+        }
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            margin: 130px 0;
+            align-items: center;
+        }
+        .firstSection > div{
+            width: 30%;
+        }
+        .leftSection{
+            font-size: 2rem;
+        }
+        .home-sci a{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid aqua;
+            border-radius: 50%;
+            font-size: 20px;
+            color: aqua;
+            text-decoration: none;
+            margin: 30px 15px 30px 0;
+        }
+        .home-sci a:hover{
+            background: aqua;
+            color: #081b29;
+            box-shadow:0 0 20px aqua ;
+        }
+        .btn-box{
+            display: inline-block;
+            padding: 12px 28px;
+            background: aqua;
+            border-radius: 40px;
+            font-size: 16px;
+            color: #081b29;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .btn-box:hover{
+            box-shadow: 0 0 5px 0 cyan,
+            0 0 25px cyan, 0 0 50px cyan,
+            0 0 100px cyan, 0 0 200px cyan
+        }
+        
+        
+        
+        .rightSection img{
+            width: 80%;
+            border: 0px solid aqua;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px aqua, -4px -4px 25px aqua;
+            background-color: rgb(0, 0, 33);
+
+        }
+        .purple{
+            color: rgb(109, 13, 198);
+        }
+        .text-gray{
+            color: gray;
+        }
+        #element{
+            color:  rgb(109, 13, 198);
+        }
+        .about{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .about img{
+            height: 250px;
+            border: 2px solid aqua;
+            border-radius:50%;
+            margin-left: 80px;
+
+        }
+        .about-text{
+            margin-right: 100px;
+        }
+        .about-text h2{
+            font-size: 60px;
+        }
+        .about-text h2 span{
+            color: aqua;
+        }
+        .about-text h4{
+            font-size: 29px;
+            font-weight: 600;
+            color: white;
+            line-height: 1.7;
+            margin: 15px 0 30px;
+        }
+        .about-text p{
+            color: aliceblue;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 4rem;
+        }
+        .sub-title{
+            text-align: center;
+            font-size: 60px;
+            padding-bottom: 70px;
+        }
+        .sub-title span{
+            color: aqua;
+        }
+        .container{
+            padding: 90px;
+        }
+        .services-list{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(256px,1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
+        .services-list div{
+            background-color: transparent;
+            padding: 40px;
+            font-size: 13px;
+            font-weight: 13px;
+            border-right: 10px;
+            border-radius: 20px;
+            transform: background 0.5s, transform 0.5s;
+            box-shadow: 1px 1px 20px #012290f7,
+                        1px 1px 40px #0053b8f7;
+        }
+        .services-list div i{
+            font-size: 50px;
+            font-weight: 500;
+            margin-bottom: 15px;
+
+        }
+        .services-list div a{
+            text-decoration: none;
+            color: #000000;
+            font-size: 12px;
+            margin-top: 20px;
+            display: inline-block;
+            
+        }
+        .read{
+            display: inline-block;
+            padding: 20px 28px;
+            background: aqua;
+            border-radius: 40px;
+            font-size: 16px;
+            color: #081b29;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight:600;
+            
+            animation: slideTop 1s ease forwards;
+            animation-delay: 2s;
+            box-shadow: 0 0 5px aqua,
+            0 0 25px aqua;
+        }
+        .read:hover{
+            box-shadow: 0 0 5px 0 cyan,
+            0 0 25px cyan, 0 0 50px cyan,
+            0 0 100px cyan, 0 0 200px cyan;
+
+        }
+        .services-list div:hover{
+            transform: translateY(-10px);
+        }
+        section{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container1{
+            width: 600px;
+            height: 500px;
+            padding: 75px 90px;
+            margin-left: 120px;
+        }
+        .heading1{
+            text-align: center;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 5px;
+            margin-bottom: 50px;
+        }
+        .bar{
+            font-size: 23px;
+        }
+        .Technical-bars .bar{
+            margin-top: 40px 0;
+        }
+        .Technical-bars .bar:first-child{
+            margin-top: 0;
+        }
+        .Technical-bars .bar:last-child{
+            margin-bottom: 0;
+
+        }
+        .Technical-bars .bar .info{
+            margin-bottom: 5px;
+        }
+        .Technical-bars .bar .info span{
+            font-size: 17px;
+            font-weight: 500;
+            animation: showText 0.5s 1s linear forwards;
+            opacity: 0;
+        }
+        .Technical-bars .bar .progress-line{
+            position: relative;
+            border-radius: 10px;
+            width: 100%;
+            height: 5px;
+            background-color: #000000;
+            animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        @keyframes animate{
+            100%{
+                transform: scaleX(1);
+            }
+        }
+        .Technical-bars .bar .progress-line span{
+            height: 100%;
+            background-color: aqua;
+            position: absolute;
+            border-radius: 10px;
+            animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        .progress-line.html span{
+            width: 90%;
+        }
+        .progress-line.css span{
+            width: 60%;
+        }
+        .progress-line.javascript span{
+            width: 85%;
+
+        }
+        .progress-line.python span{
+            width: 75%;
+        }
+        .progress-line.nodejs span{
+            width: 70%;
+        }
+        .progress-line span::after{
+            position: absolute;
+            padding: 1px 8px;
+            background-color:#000;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 3px;
+            top: -28px;
+            right: -20px;
+            animation: showText 0.5s 1.5s linear forwards;
+        }
+        .progress-line.html span::after{
+            content: "90%";
+        }
+        .progress-line.css span::after{
+            content: "60%";
+        }
+        .progress-line.javascript span ::after{
+            content: "85%";
+        }
+        .progress-line.python span::after{
+            content: "90%";
+        }
+        .progress-line.nodejs span::after{
+            content: "90%";
+        }
+        .progress-line span::before{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 7px solid transparent;
+            border-bottom-width: 0px;
+            border-right-width: 0px;
+            border-top-color: #000;
+            top: -10px;
+            right: 0;
+            animation: showText 0.5s 1.5s linear forwards;
+        }
+        @keyframes showText{
+            100%{
+                opacity: 1;
+            }
+        }
+        .radial-bars{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+        .radial-bars .radial-bar{
+            width: 50%;
+            height: 170px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .radial-bars .radial-bar svg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            width: 120px;
+            height: 160px;
+        }
+        .radial-bars .radial-bar .progress-bar{
+            stroke-width: 10;
+            stop-color: black;
+            fill: transparent;
+            stroke-dasharray: 502;
+            stroke-dashoffset: 502;
+            stroke-linecap:round ;
+            animation: animate-bar 1s linear forwards;
+
+        }
+        @keyframes animate-bar{
+            100%{
+                stroke-dashoffset: -1;
+            }
+        }
+
+        .path{
+            stroke-width: 10;
+            stroke: aqua;
+            fill: transparent;
+            stroke-dasharray:502;
+            stroke-dashoffset: 502;
+            stroke-linecap:round;
+
+        }
+        .path-1{animation: animate-path1 1s 1s linear forwards;}
+        .path-2{animation: animate-path2 1s 1s linear forwards;}
+        .path-3{animation: animate-path3 1s 1s linear forwards;}
+        .path-4{animation: animate-path4 1s 1s linear forwards;}
+        
+
+        @keyframes animate-path1{
+            100%{
+                stroke-dashoffset: 50;;
+            }
+        }
+        @keyframes animate-path2{
+            100%{
+                stroke-dashoffset: 175;;
+            }
+        }
+        @keyframes animate-path3{
+            100%{
+                stroke-dashoffset: 125;;
+            }
+        }
+        @keyframes animate-path4{
+            100%{
+                stroke-dashoffset: 75;;
+            }
+        }
+        .radial-bar .percentage{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 17px;
+            font-weight: 500;
+            animation: showText 0.5s 1s linear forwards;
+            opacity: 0;
+        }
+        .radial-bar .text{
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            left: 10%;
+            bottom: -5px;
+            transform: translateX(-5px);
+            font-size: 15px;
+            font-weight: 500;
+            animation: showText 0.5s 1s linear forwards;
+            opacity: 0;
+        }
+        .main-text{
+            padding-top: 120px;
+            margin-top: 200px;
+            
+        }
+        .main-text h2{
+            font-size: 60px;
+            line-height: 1;
+            text-align: center;
+        }
+        .main-text h2 span{
+            color: #0ef;
+        }
+        .portfolio-content{
+            display: grid;
+            gap: 15px;
+            margin:50px;
+            grid-template-columns: repeat(auto-fit,minmax(359px, auto));
+
+        }
+        .row{
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .row img{
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+            transition: transform 0.5s;
+        }
+        .layer{
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(0,0,0,0.1),#0ef);
+            position: absolute;
+            border-radius: 8px;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 40px;
+            transition: height 0.5s;
+            
+        }
+        .layer h5{
+            color: #000;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .layer p{
+            color: #000;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        .layer i{
+            color: #ff004f;
+            margin-top: 20px;
+            font-size: 20px;
+            background: #fff;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .row:hover img{
+            transform: scale(1.1);
+
+        }
+        .row:hover .layer{
+            height: 100%;
+        }
+        .contact{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 3rem;
+            padding-left: 30px;
+            margin-top: 130px;
+        }
+        .contact-text h2{
+            font-size: 90px;
+            line-height: 1;
+            text-align: center;
+        }
+        .contact-text h2 span{
+            color: #0ef;
+        }
+        .contact-text h4{
+            margin-top: 15px 0;
+            color: rgb(228, 228, 228);
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .contact-text p{
+            color: rgb(177, 177, 177);
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 2rem;
+        }
+        .contact-list{
+            margin-bottom: 3rem;
+        }
+        .contact-list li{
+            margin-bottom: 10px;
+            display: block;
+        }
+        .contact-list li{
+            margin-bottom: 10px;
+            display: block;
+        }
+        .contact-list i{
+            display: inline-block;
+            color: #0ef;
+            font-size: 20px;
+            font-weight: 600;
+            transition: all .40s ease;
+
+        }
+        .contact-list li a:hover{
+            transform: scale(1.01) translateY(-5px);
+            color: #0ef;
+        }
+        .contact-icons i{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #0ef;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #0ef;
+            text-decoration: none;
+            margin: 30px 15px 30px 0;
+            transition: .5s ease;
+            animation: slideLeft 1s ease forwards;
+            animation-delay:calc(.2s * var(--i)) ;
+        }
+        .contact-icons i:hover{
+            background-color: #0ef;
+            color: #000;
+            box-shadow: 0 0 20px #0ef;
+        }
+        .contact-form form{
+            position: relative;
+
+        }
+        .contact-form form input,form textarea{
+            border: none;
+            outline: none;
+            width: 90%;
+            padding: 18px;
+            background: #555557;
+            color: #000;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+        }
+        .contact-form textarea{
+            resize: none;
+            height: 220px;
+
+        }
+        .contact-form form .send{
+            display: inline-block;
+            padding: 14px 60px;
+            background: #0ef;
+            border-radius: 40px;
+            font-size: 18px;
+            color: #081b08;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: 600;
+            animation: slideTop 1s ease forwards;
+            animation-delay: 2s;
+            box-shadow: 0 0 5px #0ef,
+            0 0 25px #0ef
+
+        }
+        .contact-form form .send:hover{
+            box-shadow: 0 0 5px 0 cyan,
+            0 0 25px cyan, 0 0 50px cyan,
+            0 0 100px cyan, 0 0 200px cyan;
+
+        }
+        .last-text p{
+            width: 100%;
+            text-align: center;
+            padding: 25px 0;
+            background: rgb(7, 85, 91);
+            font-weight: 300;
+            margin-top: 70px;
+        }
+        .top{
+            position: fixed;
+            bottom: 2.1rem;
+            right: 2,1rem;
+        }
+        .top i{
+            color: #000;
+            background: #0ef;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 0.5rem;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">saif portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+     <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, i am <span class="purple">saif</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="home-sci">
+                    <a href="https://www.facebook.com/Md saif" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/saif__sahab_09/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://wa.me/918976556825" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
+                    <a href="https://www.linkedin.com/in/mdsaifali9" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                </div>
+                <a href="#" class="btn-box">More About me</a>
+
+            </div>
+             <div class="rightSection">
+                <img src="dp.jpg .jpg" alt="">
+             </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="dp.jpg .jpg" alt="">
+            </div>
+            <div class="about-text">
+                <h2>About<span>Me</span></h2>
+                <h4>Full Stack Developer</h4>
+                <p>I am a passionate and self-motivated full-stack web developer with strong skills in the MERN stack (MongoDB, Express.js, React.js, Node.js). I enjoy building user-friendly, responsive web applications and have hands-on experience in both frontend and backend development.
+
+I have created multiple real-world projects, including a Portfolio Website, an Online Book Store, and a Doctor Appointment Booking System (as part of a group project, where I handled the frontend).
+
+I am also comfortable working with technologies like JavaScript, HTML, CSS, Tailwind CSS, Bootstrap, and RESTful APIs. I love learning new tools, solving problems, and working in collaborative environments to build scalable and clean web solutions.
+
+</p>
+                      <a href="#" class="btn-box">More About Me</a>
+             </div>
+
+        </section>
+
+        <section >
+            <div class="services" id="services">
+                <div class="container">
+                    <h1 class="sub-title">My <span>Services</span></h1>
+                    <div class="services-list">
+                        <div>
+                            <i class='bx bx-code' style='color:aqua'  ></i>
+                            <h2>UI/UX Design</h2>
+                            <p>I specialize in creating intuitive and user-centered interfaces that deliver seamless digital experiences. I focus on user research, wireframing, and interactive prototyping to ensure both aesthetics and usability. My goal is to design products that are not only visually appealing but also highly functional and accessible.
+
+.</p>
+                                  <a href="#" class="read">lern more</a>
+                        </div>
+                        <div>
+                            <i class='bx bx-crop' style='color:aqua' ></i>
+                            <h2>Fronted Developer</h2>
+                            <p>I build responsive and dynamic user interfaces using modern technologies like HTML, CSS, JavaScript, React.js, and Tailwind CSS. I focus on performance, accessibility, and clean code to ensure an engaging and consistent user experience across all devices and platforms.
+
+</p>
+                                  <a href="#" class="read">lern more</a>
+                        </div>
+                        <div>
+                            <i class='bx bxl-apple' style='color:aqua'></i>
+                            <h2>Backend Developer</h2>
+                            <p>I develop secure and scalable backend systems using Node.js, Express.js, and MongoDB. My work involves building RESTful APIs, managing databases, handling authentication, and ensuring smooth data flow between client and server. I aim for clean architecture and robust performance.</p>
+                                  <a href="#" class="read">lern more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h1 class="sub-title">My <span>Skills</span></h1>
+
+        <section>
+
+            <div class="container1" id="skills">
+
+
+                <h1 class="heading1">Technical Skills</h1>
+                <div class="Technical-bars">
+                <div class="bar"><i style="color:#c95d2e"class='bx bxl-html5'></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color:#147bbc"class='bx bxl-css3' ></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color:#b0bc1e"class='bx bxl-javascript' ></i>
+                    <div class="info">
+                        <span>Javascript</span>
+                    </div>
+                    <div class="progress-line javascript">
+                        <span></span>
+                    </div>
+                    </div>
+                    <div class="bar"><i style="color:#c32ec9"class='bx bxl-python'></i>
+                        <div class="info">
+                            <span>Python</span>
+                        </div>
+                        <div class="progress-line python">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar"><i style="color:#c32ec9"class='bx bxl-java'></i>
+                        <div class="info">
+                            <span>Java</span>
+                        </div>
+                        <div class="progress-line python">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar"><i style="color:green" class='bx bxl-nodejs' ></i>
+                        <div class="info">
+                            <span>Node.js</span>
+                        </div>
+                        <div class="progress-line nodejs">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container1">
+                <h1 class="heading1">professinal Skills</h1>
+                <div class="radial-bars">
+                     
+                    <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100"  r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">80%</div>
+                    <div class="text">Consistency</div>
+                </div>
+
+                    <div class="radial-bar">
+                     
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-2" cx="100"  cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">65%</div>
+                    <div class="text">Communication</div>
+                </div>
+                <div class="radial-bar">
+                     
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-3" cx="100"  cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">75%</div>
+                    <div class="text">Problem Solving</div>
+                </div>
+                <div class="radial-bar">
+                     
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100"  cy="100" r="80"></circle>
+                        <circle class="path path-4" cx="100"  cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">85%</div>
+                    <div class="text">Adaptability</div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section>
+    <div id="portfolio" id="project">
+        <div class="main-text" id="project">
+            <h2>Latest<span>Project</span></h2>
+
+            <div class="portfolio-content">
+                <div class="row">
+                    <img src="1sonu.jpg">
+                    <div class="layer">
+                        <h5>Personal Portfolio Website</h5>
+                        <p>A fully responsive personal portfolio website built from scratch using HTML, CSS, and JavaScript. It showcases my skills, projects, and resume with smooth navigation and interactive elements. Designed with clean UI principles to ensure a professional and engaging user experience.
+
+</p>
+
+                        <a href="#"><i class='bx bx-link-external' style="color:white"></i></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="1sonu.jpg">
+                    <div class="layer">
+                        <h5> Bookstro – Online Book Store</h5>
+                        <p>A full-stack e-commerce application where users can browse, search, and purchase books online. Features include user authentication, shopping cart, order management, and admin controls. Integrated RESTful APIs for seamless communication between frontend and backend, with MongoDB for data storage.
+
+</p>
+
+                        <a href="#"><i class='bx bx-link-external' style="color:white"></i></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="1sonu.jpg">
+                    <div class="layer">
+                        <h5>Online Doctor Appointment Booking System (Group Project)</h5>
+                        <p>A collaborative project that allows users to book doctor appointments online, view doctor availability, and manage bookings. I was responsible for designing and developing the frontend using React.js and Tailwind CSS. Focused on responsive UI, form validation, and smooth user interaction.
+
+</p>
+
+                        <a href="#"><i class='bx bx-link-external' style="color:white"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="contact-text">
+        <h2>Contact<span>Me</span></h2>
+        <h4>Lets work Together</h4>
+        <p>Whether you're building something from scratch or improving an existing idea, I’d love to help bring it to life. I'm always open to exciting opportunities — freelance work, full-time roles, internships, or collaborating on innovative projects.
+
+Have an idea or just want to say hello?
+Let’s connect and make something awesome together!
+
+📩 Drop a message — I’ll get back to you as soon as possible.
+    </p>
+    <div class="contact-list">
+        <li><i class='bx bxs-send'></i>saifmr884@gmail.com</li>
+        <li><i class='bx bxs-phone'></i>9508107544</li>
+    </div>
+    <div class="contact-icons">
+        <a href=""><i class='bx bxl-facebook-circle'></i></a>
+        <a href=""><i class='bx bxl-instagram'></i></a>
+        <a href=""><i class='bx bxl-twitter'></i></a>
+        <a href=""><i class='bx bxl-linkedin'></i></a>
+    </div>
+
+
+</div>
+<div class="contact-form">
+    <form action="">
+        <input type="" placeholder="Enter your name" required>
+        <input type="" placeholder="Enter your Email" required>
+
+        <input type="" placeholder="Enter your subject">
+        <textarea name="" id="" cols="40" rows="10" placeholder="Enter your bio"></textarea>
+        <input type="submit" value="submit" class="send">
+
+    </form>
+</div>
+
+</section>
+<div class="last-text">
+    <p>Developed with love by saif 2024</p>
+</div>
+<a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+
+
+        
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer', 'Web Designer', 'MERN Stack Developer'],
+          typeSpeed: 50,
+        });
+      </script>
+
+</body>
+
+</html>
